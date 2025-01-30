@@ -1,0 +1,15 @@
+# - Rename dependency "PyJWT" to "jwt" for proper dependency resolution.
+#
+diff --git a/pyproject.toml b/pyproject.toml
+index b61c366..4a5433d 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -28,7 +28,7 @@ packages = [
+ [tool.poetry.dependencies]
+ python = ">3.9.0,<3.9.1 || >3.9.1,<3.14"
+ httpx = {extras = ["http2"], version = ">=0.23.0,<0.29.0"}
+-PyJWT = ">=2.0.0,<2.11.0"
++jwt = ">=2.0.0,<2.11.0"
+ cryptography = ">=43,<45"
+ 
+ [tool.poetry.group.dev.dependencies]

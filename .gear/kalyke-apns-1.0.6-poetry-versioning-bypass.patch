@@ -1,0 +1,15 @@
+# - Disable dynamic versioning for stable package versioning.
+#
+diff --git a/pyproject.toml b/pyproject.toml
+index b61c366..7ecffaa 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -43,7 +43,7 @@ pytest-asyncio = ">=0.25.0,<0.26.0"
+ pem = "^23.1.0"
+ 
+ [tool.poetry-dynamic-versioning]
+-enable = true
++enable = false
+ vcs = "git"
+ pattern = "^((?P<epoch>\\d+)!)?(?P<base>\\d+(\\.\\d+)*)"
+ 
